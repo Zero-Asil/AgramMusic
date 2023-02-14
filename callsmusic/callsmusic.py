@@ -8,11 +8,11 @@ from config import API_HASH, API_ID, SESSION_NAME
 from . import queues
 
 client = Client(SESSION_NAME, API_ID, API_HASH)
-pytgcalls = PyTgCalls(client)
+pytgcalls = PyTgCalls(Client)
 
 
 @pytgcalls.on_stream_end()
-async def on_stream_end(client: PyTgCalls, update: Update) -> None:
+async def on_stream_end(Client: PyTgCalls, update: Update) -> None:
     chat_id = update.chat_id
     queues.task_done(chat_id)
 
