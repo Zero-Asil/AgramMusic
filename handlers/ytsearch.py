@@ -1,22 +1,22 @@
 # the logging things
 import logging
 
-from pyrogram.types import Message
+from agram.types import Message
 from search_engine_parser import GoogleSearch
 from youtube_search import YoutubeSearch
 
-from pyrogram import Client as app, filters
+from agram import Client as app, filters
 
 logging.basicConfig(
     level=logging.DEBUG, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
 )
 logger = logging.getLogger(__name__)
 
-import pyrogram
+import agram
 
-logging.getLogger("pyrogram").setLevel(logging.WARNING)
+logging.getLogger("agram").setLevel(logging.WARNING)
 
-@app.on_message(pyrogram.filters.command(["search"]))
+@app.on_message(agram.filters.command(["search"]))
 async def ytsearch(_, message: Message):
     await message.delete()
     try:

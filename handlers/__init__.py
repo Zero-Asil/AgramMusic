@@ -3,14 +3,13 @@ import sys
 import time
 from config import (API_ID, API_HASH, BOT_TOKEN)
 
-from pyrogram import Client
+from agram import Client
 
 StartTime = time.time()
 
 app = Client(
-    "GJ516VCBOT",
+    "agramMusic",
     API_ID,
     API_HASH,
     bot_token=BOT_TOKEN,
 )
-

@@ -1,5 +1,5 @@
-from pyrogram import Client, errors
-from pyrogram.types import InlineQuery, InlineQueryResultArticle, InputTextMessageContent
+from agram import Client, errors
+from agram.types import InlineQuery, InlineQueryResultArticle, InputTextMessageContent
 
 from youtubesearchpython import VideosSearch
 

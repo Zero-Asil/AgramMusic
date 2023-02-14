@@ -1,4 +1,4 @@
-from pyrogram import Client
+from agram import Client
 from pytgcalls import PyTgCalls
 from pytgcalls.types import Update
 from pytgcalls.types.input_stream import InputStream
@@ -20,7 +20,7 @@ async def on_stream_end(client: PyTgCalls, update: Update) -> None:
         await pytgcalls.leave_group_call(chat_id)
     else:
         await pytgcalls.change_stream(
-            chat_id, 
+            chat_id,
             InputStream(
                 InputAudioStream(
                     queues.get(chat_id)["file"],

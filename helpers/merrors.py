@@ -2,8 +2,8 @@ import sys
 import traceback
 from functools import wraps
 
-from pyrogram import Client
-from pyrogram.errors.exceptions.forbidden_403 import ChatWriteForbidden
+from agram import Client
+from agram.errors.exceptions.forbidden_403 import ChatWriteForbidden
 
 
 def split_limits(text):

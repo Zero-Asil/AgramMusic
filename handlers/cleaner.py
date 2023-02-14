@@ -1,6 +1,6 @@
 import os
-from pyrogram import Client, filters
-from pyrogram.types import Message
+from agram import Client, filters
+from agram.types import Message
 from config import BOT_NAME as bn
 from helpers.filters import command, other_filters
 from helpers.decorators import sudo_users_only, errors
@@ -21,7 +21,7 @@ async def clear_downloads(_, message: Message):
     else:
         await message.reply_text("**no files download on ddatabas**")
 
-        
+
 @Client.on_message(command(["rmw", "clean"]) & ~filters.edited)
 @errors
 @sudo_users_only

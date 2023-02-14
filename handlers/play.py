@@ -1,8 +1,8 @@
 import os
 from os import path
-from pyrogram import Client, filters
-from pyrogram.types import Message, Voice, InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
-from pyrogram.errors import UserAlreadyParticipant
+from agram import Client, filters
+from agram.types import Message, Voice, InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
+from agram.errors import UserAlreadyParticipant
 from callsmusic import callsmusic, queues
 from callsmusic.callsmusic import client as USER
 from helpers.admins import get_administrators
@@ -24,7 +24,7 @@ from pytgcalls.types.input_stream import InputStream
 
 
 def transcode(filename):
-    ffmpeg.input(filename).output("input.raw", format='s16le', acodec='pcm_s16le', ac=2, ar='48k').overwrite_output().run() 
+    ffmpeg.input(filename).output("input.raw", format='s16le', acodec='pcm_s16le', ac=2, ar='48k').overwrite_output().run()
     os.remove(filename)
 
 # Convert seconds to mm:ss
@@ -98,7 +98,7 @@ async def play(_, message: Message):
         await programmer.edit(
             f" Assistant failed to this chat.\n\n reason : {e}")
         return
-    
+
     audio = (
         (message.reply_to_message.audio or message.reply_to_message.voice)
         if message.reply_to_message
@@ -218,7 +218,7 @@ async def play(_, message: Message):
     )
     else:
         await callsmusic.pytgcalls.join_group_call(
-                chat_id, 
+                chat_id,
                 InputStream(
                     InputAudioStream(
                         file_path,

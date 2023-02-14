@@ -6,14 +6,14 @@ import traceback
 import subprocess
 from io import StringIO
 from time import time
-from pyrogram import filters
+from agram import filters
 from inspect import getfullargspec
 from sys import version as pyver
 from config import BOT_USERNAME
-from pyrogram import Client
+from agram import Client
 from helpers.decorators import sudo_users_only
 from helpers.filters import command
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
+from agram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 
 async def aexec(code, client, message):

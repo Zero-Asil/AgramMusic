@@ -1,4 +1,4 @@
-from pyrogram.types import Message
+from agram.types import Message
 
 
 def get_file_id(msg: Message):

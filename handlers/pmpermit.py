@@ -1,9 +1,9 @@
 import asyncio
-from pyrogram import Client
+from agram import Client
 from helpers.filters import command
 from config import SUDO_USERS, BOT_NAME as bn, BOT_USERNAME as lel, PMPERMIT, OWNER_USERNAME
-from pyrogram import filters
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
+from agram import filters
+from agram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from callsmusic import client as USER
 
 PMSET =True
@@ -28,7 +28,7 @@ async def pmPermit(client: USER, message: Message):
                     InlineKeyboardButton(
                         "📨 Support", url=f"https://t.me/{SUPPORT_GROUP}"
                     )
-                ],[ 
+                ],[
                     InlineKeyboardButton(
                         "👤 Bot owner", url=f"https://t.me/{OWNER_USERNAME}"
                     )]
@@ -54,15 +54,15 @@ async def bye(client: Client, message: Message):
             await message.reply_text(" permit disable.")
             return
 
-@USER.on_message(filters.text & filters.private & filters.me)        
+@USER.on_message(filters.text & filters.private & filters.me)
 async def autopmPermiat(client: USER, message: Message):
     chat_id = message.chat.id
     if not chat_id in pchats:
         pchats.append(chat_id)
         await message.reply_text("Auto approve to pm.")
         return
-    message.continue_propagation()    
-    
+    message.continue_propagation()
+
 @USER.on_message(filters.command("a", ["!", ".", ""]) & filters.me & filters.private)
 async def pmPermiat(client: USER, message: Message):
     chat_id = message.chat.id
@@ -70,8 +70,8 @@ async def pmPermiat(client: USER, message: Message):
         pchats.append(chat_id)
         await message.reply_text("Approve​ to pm.")
         return
-    message.continue_propagation()    
-    
+    message.continue_propagation()
+
 
 @USER.on_message(filters.command("da", ["!", ".", ""]) & filters.me & filters.private)
 async def rmpmPermiat(client: USER, message: Message):

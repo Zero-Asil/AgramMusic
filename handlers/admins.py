@@ -1,7 +1,7 @@
 from asyncio.queues import QueueEmpty
 from config import que
-from pyrogram import Client, filters
-from pyrogram.types import Message
+from agram import Client, filters
+from agram.types import Message
 from cache.admins import set
 from helpers.decorators import authorized_users_only, errors
 from helpers.channelmusic import get_chat_id
@@ -58,12 +58,12 @@ async def skip(_, message: Message):
         await message.reply_text("Nothing is playing what to skip 🥲")
     else:
         queues.task_done(chat_id)
-        
+
         if queues.is_empty(chat_id):
             await callsmusic.pytgcalls.leave_group_call(chat_id)
         else:
             await callsmusic.pytgcalls.change_stream(
-                chat_id, 
+                chat_id,
                 InputStream(
                     InputAudioStream(
                         callsmusic.queues.get(chat_id)["file"],

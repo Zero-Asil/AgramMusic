@@ -1,8 +1,8 @@
 import asyncio
 
-from pyrogram import Client, filters
-from pyrogram.types import Dialog, Chat, Message
-from pyrogram.errors import UserAlreadyParticipant
+from agram import Client, filters
+from agram.types import Dialog, Chat, Message
+from agram.errors import UserAlreadyParticipant
 
 from callsmusic.callsmusic import client as GJ516
 from config import SUDO_USERS

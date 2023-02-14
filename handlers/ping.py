@@ -9,8 +9,8 @@ from handlers import StartTime
 from helpers.filters import command
 from telegram.utils.helpers import escape_markdown, mention_html
 from config import BOT_USERNAME, SUPPORT_GROUP, CHANNEL_UPDATES, PING_IMG, BOT_NAME
-from pyrogram import Client, filters
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
+from agram import Client, filters
+from agram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
 
 def get_readable_time(seconds: int) -> str:

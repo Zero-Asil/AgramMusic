@@ -1,5 +1,5 @@
-from pyrogram import Client
-from pyrogram.types import Message
+from agram import Client
+from agram.types import Message
 
 from config import BOT_USERNAME
 from helpers.filters import command

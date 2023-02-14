@@ -1,6 +1,6 @@
 from typing import List
 
-from pyrogram.types import Chat, User
+from agram.types import Chat, User
 
 import cache.admins
 

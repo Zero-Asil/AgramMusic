@@ -4,7 +4,7 @@ import socket
 
 import psutil
 import platform
-from pyrogram import Client, filters
+from agram import Client, filters
 
 def humanbytes(size):
     """Convert Bytes To Bytes So That Human Can Read It"""
